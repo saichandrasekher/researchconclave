@@ -40,8 +40,16 @@
         a {
             color: black;
         }
-        li > a:hover {
+        li>a:hover {
             background-color: violet;
+        }
+        nav {
+            height:130px;
+        }
+        @media screen and  (max-width: 800px) {
+        nav {
+            height:200px;
+        }
         }
 
     </style>
@@ -52,26 +60,35 @@
 <body>
     <div class="container z-depth-2">
 
-        <nav class="nav-extended ">
-            <div class="nav-wrapper">
-              <a href="#!" class="brand-logo" ><img src="img/bg1.png" class="img-fluid"> Vignan's Institute of Information Technology</a>
-              <ul class="right hide-on-med-and-down">
-                <li><a class="waves-effect waves-light btn green">REGISTRATION OPEN</a></li>
-                <br>
-                <li><a class="waves-effect waves-light btn green"  href="program-schedule.html">PROGRAM SCHEDULE</a></li>
-              </ul>
+        <nav >
+            <div class="nav-wrapper" >
+                <a href="#!" class="brand-logo center" style="line-height: 120%;">&nbsp<img src="img/bg1.png" class="circle"><br> Vignan's Institute of Information Technology</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+
+                <ul class="right hide-on-med-and-down">
+                    <li><a class="waves-effect waves-light btn-large green">REGISTRATION OPEN</a></li>
+                    <br>
+                    <li><a class="waves-effect waves-light btn-large green"  href="program-schedule.html">PROGRAM SCHEDULE</a></li>
+                </ul>
+                
             </div>
-            <div class="nav-content">
-                <span class="nav-title"></span>
-              </div>
-          </nav>
+            
+        </nav>
+        <ul id="slide-out" class="sidenav">
+            <li><a>Registration Open</a></li>
+            <li><a  href="program-schedule.html">Program Schedule</a></li>
+        </ul>
+        
 
         <script>
-            $(document).ready(function() {
-                $('.button-collapse').sideNav();
+            	document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, 'left');
             });
         </script>
-   
+
 
         <div class="row " >
             <div class="col s12 m4 l3">

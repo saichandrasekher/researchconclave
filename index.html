@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com"> -->
-    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" /> -->
+    <!-- Compiled and minified CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    
+
 
     <title>Research</title>
     <style>
@@ -39,8 +43,17 @@
             color: black;
         }
         
+        
         li>a:hover {
             background-color: violet;
+        }
+        nav {
+            height:130px;
+        }
+        @media screen and  (max-width: 800px) {
+        nav {
+            height:200px;
+        }
         }
     </style>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -50,23 +63,32 @@
 <body>
     <div class="container z-depth-2">
 
-        <nav class="nav-extended ">
-            <div class="nav-wrapper">
-                <a href="#!" class="brand-logo"><img src="img/bg1.png" class="img-fluid"> Vignan's Institute of Information Technology</a>
+        <nav >
+            <div class="nav-wrapper" >
+                <a href="#!" class="brand-logo center" style="line-height: 120%;">&nbsp<img src="img/bg1.png" class="circle"><br> Vignan's Institute of Information Technology</a>
+                <a href="#" data-target="slide-out" class="sidenav-trigger">
+                    <i class="material-icons">menu</i>
+                </a>
+
                 <ul class="right hide-on-med-and-down">
-                    <li><a class="waves-effect waves-light btn green">REGISTRATION OPEN</a></li>
+                    <li><a class="waves-effect waves-light btn-large green">REGISTRATION OPEN</a></li>
                     <br>
-                    <li><a class="waves-effect waves-light btn green"  href="program-schedule.html">PROGRAM SCHEDULE</a></li>
+                    <li><a class="waves-effect waves-light btn-large green"  href="program-schedule.html">PROGRAM SCHEDULE</a></li>
                 </ul>
+                
             </div>
-            <div class="nav-content">
-                <span class="nav-title"></span>
-            </div>
+            
         </nav>
+        <ul id="slide-out" class="sidenav">
+            <li><a>Registration Open</a></li>
+            <li><a  href="program-schedule.html">Program Schedule</a></li>
+        </ul>
+        
 
         <script>
-            $(document).ready(function() {
-                $('.button-collapse').sideNav();
+            	document.addEventListener('DOMContentLoaded', function() {
+                var elems = document.querySelectorAll('.sidenav');
+                var instances = M.Sidenav.init(elems, 'left');
             });
         </script>
 
@@ -94,7 +116,7 @@
                         </ul>
             </div>
             <div class="col s12 m8 l9">
-                <img src="1.png">
+                <img src="1.png" class="responsive-img">
                 <center>
 
                     <div>
@@ -105,12 +127,11 @@
                         <p><i class="material-icons">mail</i></i> abc@vignan.org<br>
                             <i class="material-icons">local_phone</i> 11-1--1--1</p>
 
-                        <div class="googleMap">
-                            <div class="googleMapWrapper">
-                                <iframe width="850" height="509" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=glbimr&amp;sll=28.471917,77.489169&amp;sspn=0.001683,0.002411&amp;ie=UTF8&amp;hq=glbimr&amp;hnear=&amp;ll=28.473407,77.488074&amp;spn=0.013203,0.025105&amp;z=15&amp;output=embed"></iframe>
-                            </div>
-                            <div class="clr"></div>
-                        </div>
+                            <div class="video-container">
+                                <iframe width="853" height="480" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.co.in/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=glbimr&amp;sll=28.471917,77.489169&amp;sspn=0.001683,0.002411&amp;ie=UTF8&amp;hq=glbimr&amp;hnear=&amp;ll=28.473407,77.488074&amp;spn=0.013203,0.025105&amp;z=15&amp;output=embed" frameborder="0" allowfullscreen></iframe>
+                              </div>
+
+                        
                     </div>
             </div>
 
